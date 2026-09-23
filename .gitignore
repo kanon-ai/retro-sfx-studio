@@ -1,0 +1,11 @@
+__pycache__/
+build*/
+dist/
+bin/
+outputs/
+*.spec
+*.zip
+test-results/
+.test-venv/
+native-build/
+releases/
