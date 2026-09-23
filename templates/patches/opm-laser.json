@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "name": "OPM / レーザー",
+  "chip": "OPM",
+  "mode": "FM",
+  "duration": 0.38,
+  "tail": 0.3,
+  "note": 92,
+  "sweep": -46.0,
+  "curve": 0.6,
+  "vibrato": 0.0,
+  "speed": 6.0,
+  "attack": 0.0,
+  "decay": 0.15,
+  "sustain": 0.35,
+  "release": 0.18,
+  "level": 0.8,
+  "algorithm": 0,
+  "feedback": 5,
+  "instrument": 0,
+  "tone": true,
+  "noise": false,
+  "noisePeriod": 12,
+  "noiseEnd": 28,
+  "sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "sequenceOn": false,
+  "pan": "C",
+  "operators": [
+    {
+      "mul": 3,
+      "tl": 18,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 10,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 36,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 10,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    }
+  ]
+}

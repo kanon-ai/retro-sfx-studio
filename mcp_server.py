@@ -18,7 +18,7 @@ PATCH_SCHEMA['properties'].update(version={'type':'integer','const':1},pan={'typ
 PATCH_SCHEMA['additionalProperties']=False
 TOOLS=[
  {'name':'list_presets','description':'List factory SFX presets, chips and editing capabilities. No files are written.','inputSchema':{'type':'object','properties':{},'additionalProperties':False}},
- {'name':'get_preset','description':'Get a complete patch by preset index (0-based). Use as a starting point and modify parameters.','inputSchema':{'type':'object','properties':{'index':{'type':'integer','minimum':0,'maximum':11}},'required':['index'],'additionalProperties':False}},
+ {'name':'get_preset','description':'Get a complete patch by preset index (0-based). Use list_presets to find a chip-specific template, then modify its parameters.','inputSchema':{'type':'object','properties':{'index':{'type':'integer','minimum':0,'maximum':len(engine.presets())-1}},'required':['index'],'additionalProperties':False}},
  {'name':'validate_patch','description':'Validate and complete a patch, returning exact settings and event count.','inputSchema':{'type':'object','properties':{'patch':PATCH_SCHEMA},'required':['patch'],'additionalProperties':False}},
  {'name':'render_sound','description':'Render a patch through the ymfm chip emulator. Write WAV and editable patch JSON in a new local outputs folder; return absolute paths.','inputSchema':{'type':'object','properties':{'patch':PATCH_SCHEMA},'required':['patch'],'additionalProperties':False}},
  {'name':'export_sound','description':'Create AI handoff package: WAV, VGM, editable patch, register timeline, C header, Markdown integration guide and SHA-256 manifest. Writes only under the local outputs folder.','inputSchema':{'type':'object','properties':{'patch':PATCH_SCHEMA},'required':['patch'],'additionalProperties':False}},
@@ -57,7 +57,7 @@ def dispatch(message):
     def ok(value):return {'jsonrpc':'2.0','id':ident,'result':value}
     if method=='initialize':
         version=params.get('protocolVersion')
-        return ok({'protocolVersion':version if version in SUPPORTED else SUPPORTED[0],'capabilities':{'tools':{'listChanged':False}},'serverInfo':{'name':'retro-sfx-studio','version':'1.0.0'},'instructions':'Create retro chip sound effects. Start with list_presets/get_preset; use export_sound to hand off assets to a game project. Files are local. Preserve BGM and shared chip registers when integrating.'})
+        return ok({'protocolVersion':version if version in SUPPORTED else SUPPORTED[0],'capabilities':{'tools':{'listChanged':False}},'serverInfo':{'name':'retro-sfx-studio','version':'1.1.0'},'instructions':'Create retro chip sound effects. Start with list_presets/get_preset; use export_sound to hand off assets to a game project. Files are local. Preserve BGM and shared chip registers when integrating.'})
     if method=='ping':return ok({})
     if method=='tools/list':return ok({'tools':TOOLS})
     if method=='tools/call':

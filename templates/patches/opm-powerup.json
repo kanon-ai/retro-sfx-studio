@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "name": "OPM / パワーアップ",
+  "chip": "OPM",
+  "mode": "FM",
+  "duration": 0.72,
+  "tail": 0.3,
+  "note": 60,
+  "sweep": 0.0,
+  "curve": 1.0,
+  "vibrato": 0.0,
+  "speed": 6.0,
+  "attack": 0.005,
+  "decay": 0.12,
+  "sustain": 0.7,
+  "release": 0.2,
+  "level": 0.8,
+  "algorithm": 4,
+  "feedback": 0,
+  "instrument": 0,
+  "tone": true,
+  "noise": false,
+  "noisePeriod": 12,
+  "noiseEnd": 28,
+  "sequence": [
+    0,
+    4,
+    7,
+    12,
+    16,
+    19,
+    24,
+    24
+  ],
+  "sequenceOn": true,
+  "pan": "C",
+  "operators": [
+    {
+      "mul": 1,
+      "tl": 36,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 10,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 2,
+      "tl": 30,
+      "dt": 1,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 10,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    }
+  ]
+}

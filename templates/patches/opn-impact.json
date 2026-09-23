@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "name": "OPN / 爆発・衝撃",
+  "chip": "OPN",
+  "mode": "FM",
+  "duration": 0.65,
+  "tail": 0.3,
+  "note": 38,
+  "sweep": -20.0,
+  "curve": 0.5,
+  "vibrato": 0.0,
+  "speed": 6.0,
+  "attack": 0.0,
+  "decay": 0.3,
+  "sustain": 0.12,
+  "release": 0.28,
+  "level": 0.8,
+  "algorithm": 0,
+  "feedback": 7,
+  "instrument": 0,
+  "tone": true,
+  "noise": false,
+  "noisePeriod": 12,
+  "noiseEnd": 28,
+  "sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "sequenceOn": false,
+  "pan": "C",
+  "operators": [
+    {
+      "mul": 15,
+      "tl": 2,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 7,
+      "tl": 12,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 3,
+      "tl": 18,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 0,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "name": "OPN / コイン",
+  "chip": "OPN",
+  "mode": "FM",
+  "duration": 0.28,
+  "tail": 0.3,
+  "note": 84,
+  "sweep": 0.0,
+  "curve": 1.0,
+  "vibrato": 0.0,
+  "speed": 6.0,
+  "attack": 0.0,
+  "decay": 0.07,
+  "sustain": 0.65,
+  "release": 0.12,
+  "level": 0.8,
+  "algorithm": 4,
+  "feedback": 0,
+  "instrument": 0,
+  "tone": true,
+  "noise": false,
+  "noisePeriod": 12,
+  "noiseEnd": 28,
+  "sequence": [
+    0,
+    0,
+    7,
+    7,
+    12,
+    12,
+    12,
+    12
+  ],
+  "sequenceOn": true,
+  "pan": "C",
+  "operators": [
+    {
+      "mul": 3,
+      "tl": 32,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 10,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 2,
+      "tl": 42,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 10,
+      "dt": 0,
+      "ar": 31,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 12,
+      "wave": 0
+    }
+  ]
+}

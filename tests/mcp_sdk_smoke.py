@@ -14,9 +14,12 @@ async def main():
             listing=await session.list_tools()
             assert len(listing.tools)==6
             print('Tools:',[tool.name for tool in listing.tools])
-            preset=await session.call_tool('get_preset',{'index':1})
+            presets=await session.call_tool('list_presets',{})
+            assert len(json.loads(presets.content[0].text)['presets'])==52
+            preset=await session.call_tool('get_preset',{'index':51})
             assert not preset.is_error
-            p=json.loads(preset.content[0].text);p['name']='Official SDK coin'
+            p=json.loads(preset.content[0].text);assert p['name']=='OPM / パワーアップ'
+            p['name']='Official SDK template'
             result=await session.call_tool('export_sound',{'patch':p})
             assert not result.is_error,result
             data=json.loads(result.content[0].text)

@@ -21,7 +21,7 @@ def samples(p):
         return array('h',wav.readframes(wav.getnframes())),raw
 
 def pure(chip,mode='FM'):
-    p=copy.deepcopy(engine.presets()[-1]);p.update(chip=chip,mode=mode,attack=0,decay=0,release=.1,sustain=1,level=.6)
+    p=copy.deepcopy(next(p for p in engine.presets() if p['name']=='Pure tone'));p.update(chip=chip,mode=mode,attack=0,decay=0,release=.1,sustain=1,level=.6)
     if chip=='OPLL':
         p['instrument']=0
         for i in range(2):p['operators'][i].update(mul=1,tl=63 if i==0 else 0,ar=15,dr=0,sr=0,sl=0,rr=8)

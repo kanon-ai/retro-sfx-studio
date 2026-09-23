@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "name": "OPLL / 警報",
+  "chip": "OPLL",
+  "mode": "FM",
+  "duration": 1.2,
+  "tail": 0.3,
+  "note": 69,
+  "sweep": 0.0,
+  "curve": 1.0,
+  "vibrato": 0.0,
+  "speed": 6.0,
+  "attack": 0.008,
+  "decay": 0.03,
+  "sustain": 0.85,
+  "release": 0.08,
+  "level": 0.8,
+  "algorithm": 4,
+  "feedback": 0,
+  "instrument": 6,
+  "tone": true,
+  "noise": false,
+  "noisePeriod": 12,
+  "noiseEnd": 28,
+  "sequence": [
+    0,
+    7,
+    0,
+    7,
+    0,
+    7,
+    0,
+    7
+  ],
+  "sequenceOn": true,
+  "pan": "C",
+  "operators": [
+    {
+      "mul": 2,
+      "tl": 32,
+      "dt": 0,
+      "ar": 15,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 10,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 0,
+      "dt": 0,
+      "ar": 15,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 10,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 36,
+      "dt": 0,
+      "ar": 15,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 10,
+      "wave": 0
+    },
+    {
+      "mul": 1,
+      "tl": 10,
+      "dt": 0,
+      "ar": 15,
+      "dr": 0,
+      "sr": 0,
+      "sl": 0,
+      "rr": 10,
+      "wave": 0
+    }
+  ]
+}

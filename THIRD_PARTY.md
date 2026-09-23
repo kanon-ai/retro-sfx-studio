@@ -19,3 +19,7 @@ MCP implementation reference: https://modelcontextprotocol.io/specification/2025
 The Windows distribution includes CPython 3.13.5, the PyInstaller 6.20.0 bootloader (bootloader exception), and OpenSSL libraries used by the Python runtime. Their license texts are included under `_internal/licenses/` and `licenses/` in the source package.
 
 The bundled license files preserve the upstream copyright notices and applicable terms. Vendored ymfm sources are unmodified; application-specific clock handling is implemented in `native/render.cpp`.
+
+## Original sound templates
+
+The original patches in `templates/patches/`, WAV files in `templates/audio/`, and `templates/catalog.json` are dedicated to the public domain under CC0-1.0 by kanon-ai (2026). These are newly synthesized sounds, not samples from third-party games. See `templates/LICENSE`. Application code and the preview page remain MIT-licensed.

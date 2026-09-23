@@ -12,15 +12,17 @@ def write_zip(path,items):
     return dict(file=path.name,bytes=path.stat().st_size,sha256=hashlib.sha256(path.read_bytes()).hexdigest())
 binary=ROOT/'dist/RetroSFX'
 items=[(f,'RetroSFX/'+f.relative_to(binary).as_posix()) for f in sorted(binary.rglob('*')) if f.is_file() and 'outputs' not in f.relative_to(binary).parts]
-results=[write_zip(out/'RetroSFX-Studio-v1.0.0-win-x64.zip',items)]
+results=[write_zip(out/'RetroSFX-Studio-v1.1.0-win-x64.zip',items)]
 files=[]
 for filename in ['LICENSE','DISCLAIMER.md','requirements-dev.txt','README.md','MCP_SETUP.md','THIRD_PARTY.md','engine.py','server.py','handoff.py','mcp_server.py','launcher.py','start.bat','build.ps1','CMakeLists.txt','.gitignore','.gitattributes']:
     files.append(ROOT/filename)
-for folder in ['static','native','tests','tools','licenses']:
+for folder in ['static','native','tests','tools','licenses','templates']:
     files.extend(f for f in (ROOT/folder).rglob('*') if f.is_file() and '__pycache__' not in f.parts)
 files.extend(f for f in (ROOT/'vendor/ymfm/src').rglob('*') if f.is_file())
 files.extend([ROOT/'vendor/ymfm/LICENSE',ROOT/'vendor/ymfm/README.md',ROOT/'vendor/ymfm/GeneralInfo.md'])
 files.append(ROOT/'bin/retro_render.exe')
-results.append(write_zip(out/'RetroSFX-Studio-v1.0.0-source.zip',[(f,'retro-sfx-studio/'+f.relative_to(ROOT).as_posix()) for f in sorted(files)]))
+results.append(write_zip(out/'RetroSFX-Studio-v1.1.0-source.zip',[(f,'retro-sfx-studio/'+f.relative_to(ROOT).as_posix()) for f in sorted(files)]))
+results.append(write_zip(out/'RetroSFX-Templates-v1.1.0.zip',[(f,'RetroSFX-Templates/'+f.relative_to(ROOT/'templates').as_posix()) for f in sorted((ROOT/'templates').rglob('*')) if f.is_file()]))
+(out/'SHA256SUMS.txt').write_text(''.join(item['sha256']+'  '+item['file']+'\n' for item in results),encoding='utf-8')
 (out/'SHA256.json').write_text(json.dumps(results,indent=2),encoding='utf-8')
 print(json.dumps(results,indent=2))

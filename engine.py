@@ -220,4 +220,6 @@ def presets():
             p['operators'][3].update(ar=31,dr=0,sr=0,tl=0)
         if name=='Glass bell': p['operators'][0].update(mul=7,tl=38); p['operators'][1].update(mul=1,tl=8)
         bank.append(validate(p))
+    catalog=json.loads((ROOT/'templates/catalog.json').read_text(encoding='utf-8'))
+    bank.extend(validate(item['patch']) for item in catalog['templates'])
     return bank
